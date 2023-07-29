@@ -1,0 +1,68 @@
++ hola
+- Hola, Soy un robot, esta es la informacion que te puedo ofrecer\n
+^ Nuestros telefonos\n
+^ Nuestra direccion\n
+^ Entregas\n
+^ Pagina web\n
+^ Horarios\n
+^ Menu\n
+! var lunes = Menu del Lunes\n 
+^ Empanadas la docena $1400\n 
+^ Pizza $1000\n
+! var martes = Menu del Martes \n
+^ Sandwich de milanesa $1200 \n
+^ Pastel de papa $1000 \n
+! var miercoles = Menu del Miercoles \n
+^ Pastel de carne $1400 \n
+^ Tallarines $1000 \n
+! var jueves = Menu del Jueves \n
+^ Empanadas la docena $1400\n 
+^ Pizza $1000\n
+! var viernes = Menu del Viernes \n
+^ Sandwich de milanesa $1200 \n
+^ Pastel de papa $1000 \n
+! var sabado = Menu del Sabado \n
+^ Asado $4000 \n
+^ Milanesa Napolitana $1500 \n
+! var domingo = Los domingo esta cerrado
+! var horario = Lunes abrimos de 08:00 a 18:00\n
+^ Martes abrimos de 08:00 a 18:00\n
+^ Miercoles abrimos de 08:00 a 18:00\n
+^ Jueves abrimos de 08:00 a 18:00\n
+^ Viernes abrimos de 08:00 a 18:00\n
+^ Sabados abrimos de 08:00 a 12:00\n
+^ Domingos Cerrado\n
++ [*] lunes{weight=2} [*]
+- <bot lunes>
++ [*] martes{weight=2} [*]
+- <bot martes>
++ [*] miercoles{weight=2} [*]
+- <bot miercoles>
++ [*] jueves{weight=2} [*]
+- <bot jueves>
++ [*] viernes{weight=2} [*]
+- <bot viernes>
++ [*] sabado{weight=2} [*]
+- <bot sabado>
++ [*] domingo{weight=2} [*]
+- <bot domingo>
++ [*] (menu|carta) [*]
+- <bot lunes> \n <bot martes> \n <bot miercoles> \n <bot jueves> \n <bot viernes> \n <bot sabado> \n <bot domingo>
++ como estas
+@ hola
++ hay alguien*
+@ hola
++ [*] (telefono|celular|cel) [*]
+- Nuestro telefono es 725648221
++ [*] (direccion|ubicacion|lugar) [*]
+- Nuestra direccion es Av Juan B. Justo 1050, San Miguel de Tucumán
+- Nos encontramos ubicados en Av Juan B. Justo 1050, San Miguel de Tucumán
++ [*] (entregas|a domicilio) [*]
+- Realizamos entregas a domicilio solo de lunes a viernes de 12:00 a 15:00
++ [*] (pagina web|web|pagina) [*]
+- Visitanos en https://www.restaurant.com
++ [*] (hora|horarios|dias|abierto){weight=3} [*]
+- <bot horario>
++ *
+- Recuerda que soy un robot, me podrías preguntar de otra forma
+- Intenta hacer tu pregunta de otra manera.

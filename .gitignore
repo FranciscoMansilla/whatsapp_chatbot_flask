@@ -1,0 +1,55 @@
+# Archivos generados automáticamente
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Carpeta virtual environment (si utilizas entornos virtuales)
+venv/
+env/
+*.env
+
+# Archivos de registro
+*.log
+
+# Archivos y directorios específicos de IDEs y editores de texto
+.vscode/
+.idea/
+*.code-workspace
+
+# Archivos y directorios generados por Flask
+instance/
+*.pyc
+*.pyo
+*.db
+*.sqlite
+*.pyc
+*.pyo
+*.pyc
+
+# Archivos de configuración locales
+*.cfg
+*.conf
+*.env
+
+# Archivos de configuración y claves de acceso (¡nunca deben ser compartidos!)
+config.json
+secrets.ini
+*.key
+
+# Archivos de almacenamiento de sesiones
+session/
+sessions/
+
+# Archivos de datos o backups
+*.bak
+*.backup
+*.dump
+
+# Archivos de caché y temporales
+.cache/
+.tmp/
+.temp/
+*.swp
+
+# Cualquier otro archivo o carpeta que quieras excluir
